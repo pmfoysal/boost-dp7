@@ -5,6 +5,7 @@ const rgbInput = document.querySelector(`input[name='rgbInput']`);
 const rgbCopy = document.querySelector(`input[name='rgbCopy']`);
 const hslInput = document.querySelector(`input[name='hslInput']`);
 const hslCopy = document.querySelector(`input[name='hslCopy']`);
+const themeTag = document.querySelector(`meta[name='theme-color']`);
 const msgTag = document.querySelector('p');
 const genButton = document.querySelector('button');
 
@@ -88,6 +89,7 @@ function generateHandler() {
    hexInput.value = StrBeautify(hex);
    hslInput.value = StrBeautify(hsl);
    body.style.backgroundColor = rgb;
+   themeTag.content = rgb;
 }
 
 function genRGBcolor() {
@@ -117,6 +119,7 @@ function colorChanger(data) {
       sub1.value = color1;
       sub2.value = color2;
       body.style.backgroundColor = value;
+      themeTag.content = value;
    } else {
       sub1.value = '';
       sub2.value = '';
