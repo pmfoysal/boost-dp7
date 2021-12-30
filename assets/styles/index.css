@@ -39,3 +39,131 @@ h6 {
    line-height: 1.25;
    font-weight: 700;
 }
+
+body {
+   min-height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 4rem;
+   background-color: white;
+   padding: 3rem 1rem;
+}
+
+h1 {
+   text-transform: capitalize;
+   font-size: calc(30px + ((100vw - 250px) * (10 / 1600)));
+   text-align: center;
+   color: white;
+}
+
+h2 {
+   color: white;
+   text-transform: capitalize;
+   text-align: center;
+   font-weight: 400;
+   letter-spacing: 0.1rem;
+   font-size: 2rem;
+   line-height: 1;
+}
+
+button {
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: white;
+   color: black;
+}
+
+button:active,
+input[type='submit']:active {
+   transform: scale(0.97);
+}
+
+main,
+span {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+   flex-wrap: wrap;
+}
+
+main {
+   flex-direction: column;
+}
+
+input,
+button {
+   border-radius: 1rem;
+   border: 0.2rem solid white;
+   color: white;
+   padding: 1rem;
+   width: 22rem;
+   white-space: nowrap;
+   text-align: center;
+}
+
+button,
+input[type='submit'] {
+   text-transform: uppercase;
+}
+
+input {
+   text-transform: lowercase;
+}
+
+input[type='text'] {
+   letter-spacing: 0.1rem;
+}
+
+input[type='submit'] {
+   cursor: pointer;
+}
+
+input[type='submit']:hover {
+   background-color: white;
+   color: black;
+}
+
+p {
+   position: fixed;
+   top: 0;
+   left: 50%;
+   text-align: center;
+   transform: translate(-50%, -8rem);
+   padding: 1rem 2rem;
+   border-radius: 1rem;
+   background-color: rgb(171, 242, 251);
+   color: black;
+   font-weight: 600;
+   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+   transition: 0.4s;
+   z-index: 10;
+   white-space: nowrap;
+}
+
+p.active {
+   transform: translate(-50%, 3rem);
+}
+
+h1,
+h2,
+button,
+input {
+   mix-blend-mode: difference;
+}
+
+input[type='submit']:disabled {
+   opacity: 0.4;
+   cursor: not-allowed;
+}
+
+input[type='submit']:disabled:hover {
+   cursor: not-allowed;
+   background-color: black;
+   color: white;
+}
