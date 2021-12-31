@@ -256,8 +256,8 @@ function RGBtoHEXnHSL(color) {
 }
 
 function HSLtoHEXnRGB(color) {
-   const color1 = StrBeautify(HSLtoRGB(color));
-   const color2 = StrBeautify(RGBtoHEX(color1));
+   const color2 = StrBeautify(HSLtoRGB(color));
+   const color1 = StrBeautify(RGBtoHEX(color2));
    return {color1, color2};
 }
 
